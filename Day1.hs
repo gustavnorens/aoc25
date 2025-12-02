@@ -1,7 +1,5 @@
 module Day1 (sol) where
 
-import Prelude hiding (Left, Right)
-
 sol :: IO ()
 sol = do
   ops <- reverse . map parse . lines <$> getContents
