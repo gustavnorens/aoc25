@@ -38,4 +38,4 @@ parts :: String -> [String]
 parts s = map (`take` s) [1 .. div (length s) 2]
 
 invalids :: (Integer -> Bool) -> (Integer, Integer) -> Integer
-invalids invalid (n, m) = sum $ filter invalid $ take (fromInteger (abs (m - n)) + 1) (iterate (+ 1) n)
+invalids invalid (n, m) = sum $ filter invalid [n .. m]
